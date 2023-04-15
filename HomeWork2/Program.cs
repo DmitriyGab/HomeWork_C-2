@@ -28,43 +28,98 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите число");
-int number1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int number1 = Convert.ToInt32(Console.ReadLine());
 
 
-if (number1 > 99)
-{
-    while (number1 > 999)
-        {
-        number1 = number1 / 10;
-        }
+// if (number1 > 99)
+// {
+//     while (number1 > 999)
+//         {
+//         number1 = number1 / 10;
+//         }
            
-    int x2 = number1 % 10;
-    Console.WriteLine("Третье числое: "  +x2);
-}
+//     int x2 = number1 % 10;
+//     Console.WriteLine("Третье числое: "  +x2);
+// }
 
-else if (number1 < -99)
-{
-    while (number1 < -999)
-        {
-        number1 = number1 / 10;
-        }
+// else if (number1 < -99)
+// {
+//     while (number1 < -999)
+//         {
+//         number1 = number1 / 10;
+//         }
         
-        int x2 = number1 % 10;
-        Console.WriteLine("Третье числое: "  +x2);
-}
+//         int x2 = number1 % 10;
+//         Console.WriteLine("Третье числое: "  +x2);
+// }
  
-else if (number1 > 10 && number1 < 100)
+// else if (number1 > 10 && number1 < 100)
+// {
+//     Console.WriteLine($"У числа {number1} не имеется третьей цифры");
+// }
+
+// else if (number1 < -10 && number1 > -100)
+// {
+//     Console.WriteLine($"У числа {number1} не имеется третьей цифры");
+// }
+
+// else
+// {
+//     Console.WriteLine($"У числа {number1} не имеется третьей цифры");
+// }
+
+
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, 
+// обозначающую день недели, и проверяет, является ли этот день выходным.
+
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+Console.WriteLine("Введите число, соответствующее дню недели");
+int dayWeek = Convert.ToInt32(Console.ReadLine());
+
+if (dayWeek > 0 && dayWeek < 8)
 {
-    Console.WriteLine($"У числа {number1} не имеется третьей цифры");
+    if (dayWeek == 1)
+    {
+    Console.WriteLine($"Понедельник (день № {dayWeek}) - не является выходным днём");
+    }
+    
+    else if (dayWeek == 2)
+    {
+    Console.WriteLine($"Вторник (день № {dayWeek}) - не является выходным днём");
+    }
+
+    else if (dayWeek == 3)
+    {
+    Console.WriteLine($"Среда (день № {dayWeek}) - не является выходным днём");
+    }
+
+    else if (dayWeek == 4)
+    {
+    Console.WriteLine($"Четверг (день № {dayWeek}) - не является выходным днём");
+    }
+
+    else if (dayWeek == 5)
+    {
+    Console.WriteLine($"Пятница (день № {dayWeek}) - не является выходным днём");
+    }
+
+    else if (dayWeek == 6)
+    {
+    Console.WriteLine($"Суббота (день № {dayWeek}) - выходной день");
+    }
+
+    else if (dayWeek == 7)
+    {
+    Console.WriteLine($"Воскресенье (день № {dayWeek}) - выходной день");
+    }
 }
 
-else if (number1 < -10 && number1 > -100)
+else 
 {
-    Console.WriteLine($"У числа {number1} не имеется третьей цифры");
-}
-
-else
-{
-    Console.WriteLine($"У числа {number1} не имеется третьей цифры");
+Console.WriteLine($"Введенное число {dayWeek} выходит за пределы возможного дня недели");
 }
